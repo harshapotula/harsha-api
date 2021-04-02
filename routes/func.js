@@ -31,7 +31,7 @@ router.post('/add',async(req,res) => {
     try
     {
         const data = await todo.save()
-        res.json(data)
+        res.send("Sucess")
     }
     catch(err)
     {
