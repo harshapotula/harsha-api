@@ -4,7 +4,7 @@ const url = 'mongodb+srv://Harshavardhan:Harsha@1@cluster0.f5e7u.mongodb.net/tes
 const app = express()
 let PORT = process.env.PORT || 3000;
 
-mongoose.connect(url, {useNewUrlParser:true,useUnifiedTopology:true}).catch(error => log.console(error));
+mongoose.connect(url, {useNewUrlParser:true,useUnifiedTopology:true}).catch(error => console.log(error));
 
 const con = mongoose.connection
 con.on('open',  ()=> { console.log("Connected to Database....")  } )
